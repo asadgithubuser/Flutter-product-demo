@@ -16,6 +16,12 @@ class MyClass extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
         appBar: AppBar(title: Text('Flutter Home'),),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.attach_email),
+          onPressed: (){
+            // do nothing
+          },
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -82,3 +88,39 @@ class MyClass extends StatelessWidget{
     );
   }
 }
+
+
+// State full widget example
+
+// void main() => runApp(MaterialApp(
+//   title: "my app",
+//   home: Homeclass(),
+// ));
+//
+// class Homeclass extends StatefulWidget {
+//   @override
+//   _HomeclassState createState() => _HomeclassState();
+// }
+//
+// class _HomeclassState extends State<Homeclass> {
+//   String _txt = "demo text";
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar( title: Text("state demo"),),
+//       body: Column(
+//         children: [
+//           Text(_txt),
+//           RaisedButton(
+//               child: Text("button"),
+//               onPressed: (){
+//                 print("clicked");
+//                 setState(() {
+//                   _txt = "text changed to click button";
+//                 });
+//               })
+//         ],
+//       ),
+//     );
+//   }
+// }

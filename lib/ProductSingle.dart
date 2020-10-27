@@ -1,6 +1,8 @@
 import "Product.dart";
 import 'package:flutter/material.dart';
 
+import 'RatingBox.dart';
+
 
 class ProductSingle extends StatelessWidget{
   ProductSingle({this.item}): super();
@@ -32,6 +34,7 @@ class ProductSingle extends StatelessWidget{
                         child: Text(this.item.description+ _dummyText+ _dummyText,style: TextStyle(fontSize: 16)),
                       ),
                       Text("Price: "+ this.item.price.toString(), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.blue),),
+                      RatingBox(),
                     ],
                   ),
                 ))

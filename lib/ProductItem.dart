@@ -2,10 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import "Product.dart";
+import "RatingBox.dart";
 
 class ProductItem extends StatelessWidget{
   ProductItem({this.item}): super();
   final Product item;
+
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ class ProductItem extends StatelessWidget{
                   Text(this.item.name, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.amber),),
                   Text(this.item.description),
                   Text("Price: "+this.item.price.toString(),style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.blueAccent)),
+                  RatingBox(),
                 ],
               ),
             ))
